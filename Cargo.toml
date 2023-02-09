@@ -1,0 +1,13 @@
+[package]
+name = "world_sim"
+version = "0.1.0"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+chrono = "0.4.23"
+mockd = { version = "0.4.1", features = ["datetime", "name"] }
+rand = "0.8.5"
+rayon = "1.6.1"
+rusqlite = { version = "0.28.0", features = ["bundled"] }
