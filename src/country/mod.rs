@@ -1,3 +1,5 @@
+mod untracked_new;
+
 use std::sync::{Arc, Mutex};
 
 use chrono::Duration;
@@ -59,16 +61,5 @@ impl Country {
         event_loop.add_object(Object::Country(Arc::clone(&c)));
 
         c
-    }
-}
-
-impl Simulate for Country {
-    fn advance(&mut self, time_delta: Duration) -> Vec<EventSummary> {
-        self.people
-            .iter_mut()
-            .map(|p| p.advance(time_delta))
-            .into_iter()
-            .flatten()
-            .collect::<Vec<_>>()
     }
 }
