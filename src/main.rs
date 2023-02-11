@@ -1,7 +1,6 @@
 use chrono::{Duration, Utc};
 
-use world_sim::country::Country;
-use world_sim::event::EventLoop;
+use world_sim::{country::Country, event::EventLoop};
 
 fn main() {
     let mut event_loop = EventLoop::new(Utc::now().naive_utc(), Duration::days(1));
